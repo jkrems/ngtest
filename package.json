@@ -10,6 +10,12 @@
     "serve:ssr:ngtest": "node dist/ngtest/server/server.mjs"
   },
   "private": true,
+  "imports": {
+    "#config": {
+      "node": "./src/app/app.config.server.js",
+      "default": "./src/app/app.config.js"
+    }
+  },
   "dependencies": {
     "@angular/animations": "^18.2.0",
     "@angular/common": "^18.2.0",
