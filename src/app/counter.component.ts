@@ -3,8 +3,6 @@ import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
 @Component({
   selector: 'ng-counter',
   standalone: true,
-  // @ts-ignore
-  signals: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<h1>{{count()}}</h1>
 <button (click)="inc()">Increment</button>
