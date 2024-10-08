@@ -11,6 +11,12 @@
   },
   "private": true,
   "imports": {
+    "#fancy": {
+      "ng-config:qa": "./src/fancy/qa.mjs",
+      "ng-config=staging": "./src/fancy/staging.mjs",
+      "I ❤️ 🍕": "./src/fancy/pizza.mjs",
+      "default": "./src/fancy/default.mjs"
+    },
     "#config": {
       "node": "./src/app/app.config.server.js",
       "default": "./src/app/app.config.js"
@@ -32,21 +38,18 @@
     "zone.js": "~0.14.10"
   },
   "devDependencies": {
-    "@angular-devkit/architect": "file:../../angular/angular-cli/dist/_angular-devkit_architect.tgz",
-    "@angular-devkit/architect-cli": "file:../../angular/angular-cli/dist/_angular-devkit_architect-cli.tgz",
-    "@angular-devkit/build-angular": "file:../../angular/angular-cli/dist/_angular-devkit_build-angular.tgz",
-    "@angular-devkit/build-webpack": "file:../../angular/angular-cli/dist/_angular-devkit_build-webpack.tgz",
-    "@angular-devkit/core": "file:../../angular/angular-cli/dist/_angular-devkit_core.tgz",
-    "@angular-devkit/schematics": "file:../../angular/angular-cli/dist/_angular-devkit_schematics.tgz",
-    "@angular-devkit/schematics-cli": "file:../../angular/angular-cli/dist/_angular-devkit_schematics-cli.tgz",
-    "@angular/build": "file:../../angular/angular-cli/dist/_angular_build.tgz",
-    "@angular/cli": "file:../../angular/angular-cli/dist/_angular_cli.tgz",
+    "@angular-devkit/build-angular": "^18.2.0",
+    "@angular-devkit/core": "^18.2.0",
+    "@angular-devkit/schematics": "^18.2.0",
+    "@angular-devkit/schematics-cli": "^18.2.0",
+    "@angular/build": "^18.2.0",
+    "@angular/cli": "^18.2.0",
     "@angular/compiler-cli": "^18.2.0",
-    "@angular/create": "file:../../angular/angular-cli/dist/_angular_create.tgz",
-    "@angular/pwa": "file:../../angular/angular-cli/dist/_angular_pwa.tgz",
-    "@angular/ssr": "file:../../angular/angular-cli/dist/_angular_ssr.tgz",
-    "@ngtools/webpack": "file:../../angular/angular-cli/dist/_ngtools_webpack.tgz",
-    "@schematics/angular": "file:../../angular/angular-cli/dist/_schematics_angular.tgz",
+    "@angular/create": "^18.2.0",
+    "@angular/pwa": "^18.2.0",
+    "@angular/ssr": "^18.2.0",
+    "@ngtools/webpack": "^18.2.0",
+    "@schematics/angular": "^18.2.0",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
