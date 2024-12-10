@@ -1,10 +1,14 @@
-import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input, signal } from "@angular/core";
+
+type SignalInput<T> = ReturnType<typeof input<T>>;
+
+export interface RequiredInput<T> extends SignalInput<T> {}
 
 @Component({
   selector: 'ng-counter',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `<h1>{{count()}}</h1>
+  template: `<h1>{{label()}}: {{count()}}</h1>
 <button (click)="inc()">Increment</button>
 @if (count() < 10 || count() > 20) {
   <p>Take it slow, dude!</p>
@@ -13,6 +17,8 @@ import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
 }`,
 })
 export class CounterComponent {
+  label = input('Value');
+  label2 = input.required<string>() as RequiredInput<string>;
   count = signal(0);
 
   inc() {
